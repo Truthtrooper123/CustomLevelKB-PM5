@@ -20,7 +20,8 @@ class CustomKBCommand extends Command implements PluginOwned {
     public function __construct(Main $main)
     {
         parent::__construct("customlevelkb", "Modify your servers kb!", "", ["ckb"]);
-        $this->main = $main;
+        $this->setPermission("customlevelkb.cmd");
+        $this->plugin = $plugin;
     }
 
     public function execute(CommandSender $sender, string $commandLabel, array $args): bool {
